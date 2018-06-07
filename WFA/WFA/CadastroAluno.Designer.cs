@@ -1,6 +1,6 @@
 ﻿namespace WFA
 {
-    partial class Form1
+    partial class CadastroAluno
     {
         /// <summary>
         /// Required designer variable.
@@ -30,9 +30,9 @@
         {
             this.label7 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnApagar = new System.Windows.Forms.Button();
+            this.btnEditar = new System.Windows.Forms.Button();
+            this.btnAdicionar = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
@@ -67,38 +67,43 @@
             this.dataGridView1.Size = new System.Drawing.Size(610, 298);
             this.dataGridView1.TabIndex = 32;
             // 
-            // button4
+            // btnApagar
             // 
-            this.button4.BackColor = System.Drawing.SystemColors.Highlight;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(485, 212);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(101, 33);
-            this.button4.TabIndex = 31;
-            this.button4.Text = "Apagar";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnApagar.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnApagar.Enabled = false;
+            this.btnApagar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnApagar.Location = new System.Drawing.Point(485, 212);
+            this.btnApagar.Name = "btnApagar";
+            this.btnApagar.Size = new System.Drawing.Size(101, 33);
+            this.btnApagar.TabIndex = 31;
+            this.btnApagar.Text = "Apagar";
+            this.btnApagar.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // btnEditar
             // 
-            this.button3.BackColor = System.Drawing.SystemColors.Highlight;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(380, 212);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(99, 33);
-            this.button3.TabIndex = 30;
-            this.button3.Text = "Editar";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnEditar.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnEditar.Enabled = false;
+            this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditar.Location = new System.Drawing.Point(380, 212);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(99, 33);
+            this.btnEditar.TabIndex = 30;
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // btnAdicionar
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.Highlight;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(275, 212);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(99, 33);
-            this.button2.TabIndex = 29;
-            this.button2.Text = "Adicionar";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnAdicionar.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnAdicionar.Enabled = false;
+            this.btnAdicionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdicionar.Location = new System.Drawing.Point(275, 212);
+            this.btnAdicionar.Name = "btnAdicionar";
+            this.btnAdicionar.Size = new System.Drawing.Size(99, 33);
+            this.btnAdicionar.TabIndex = 29;
+            this.btnAdicionar.Text = "Adicionar";
+            this.btnAdicionar.UseVisualStyleBackColor = false;
+            this.btnAdicionar.Click += new System.EventHandler(this.button2_Click);
+            this.btnAdicionar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.btnAdicionar_KeyDown);
             // 
             // button1
             // 
@@ -128,6 +133,7 @@
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(349, 23);
             this.txtNome.TabIndex = 2;
+            this.txtNome.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtNome_KeyDown);
             // 
             // txtIdade
             // 
@@ -137,6 +143,7 @@
             this.txtIdade.Name = "txtIdade";
             this.txtIdade.Size = new System.Drawing.Size(349, 23);
             this.txtIdade.TabIndex = 3;
+            this.txtIdade.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtIdade_KeyDown);
             // 
             // txtTurno
             // 
@@ -146,6 +153,7 @@
             this.txtTurno.Name = "txtTurno";
             this.txtTurno.Size = new System.Drawing.Size(349, 23);
             this.txtTurno.TabIndex = 4;
+            this.txtTurno.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtTurno_KeyDown);
             // 
             // txtTurma
             // 
@@ -155,6 +163,7 @@
             this.txtTurma.Name = "txtTurma";
             this.txtTurma.Size = new System.Drawing.Size(349, 23);
             this.txtTurma.TabIndex = 5;
+            this.txtTurma.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtTurma_KeyDown);
             // 
             // txtMatricula
             // 
@@ -164,6 +173,8 @@
             this.txtMatricula.Name = "txtMatricula";
             this.txtMatricula.Size = new System.Drawing.Size(349, 23);
             this.txtMatricula.TabIndex = 1;
+            this.txtMatricula.TextChanged += new System.EventHandler(this.txtMatricula_TextChanged);
+            this.txtMatricula.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtMatricula_KeyDown);
             // 
             // label5
             // 
@@ -220,16 +231,16 @@
             this.label1.TabIndex = 17;
             this.label1.Text = "Matricula";
             // 
-            // Form1
+            // CadastroAluno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(633, 582);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnApagar);
+            this.Controls.Add(this.btnEditar);
+            this.Controls.Add(this.btnAdicionar);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtNome);
@@ -242,8 +253,10 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "Form1";
+            this.Name = "CadastroAluno";
             this.Text = "Form1";
+            this.Activated += new System.EventHandler(this.CadastroAluno_Activated);
+            this.Load += new System.EventHandler(this.CadastroAluno_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -254,9 +267,9 @@
 
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnApagar;
+        private System.Windows.Forms.Button btnEditar;
+        private System.Windows.Forms.Button btnAdicionar;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtNome;

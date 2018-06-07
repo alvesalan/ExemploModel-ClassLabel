@@ -8,13 +8,39 @@ namespace Model
 {
    public class Aluno
     {
+       private static int UltimoCodigo;
+        private int Codigo;
         private string Nome;
         private int Idade;
         private string Turno;
         private string Turma;
         private int Matricula;
         private List<double> Notas = new List<double>();
+        
+       public Aluno()
+        {
+            Codigo = ++UltimoCodigo;
+        }
 
+       public void SetCodigo(int codigo)
+       {
+
+       }
+
+       public int GetCodigo()
+       {
+           return Codigo;
+       }
+
+
+       public void SetMatricula()
+       {
+          
+       }
+       public int GetMatricula()
+            {
+                 return Matricula;
+            }
         public void SetNome(string nome)
         {
             if (nome.Trim().Count() < 3)
@@ -74,7 +100,7 @@ namespace Model
             {
                 throw new Exception("Turno deve conter no mínimo 1 caracter");
             }
-            if (turma.Trim().Count() > 3)
+            if (turma.Trim().Count() > 7)
             {
                 throw new Exception("Turno deve conter no máximo 3 caracter");
             }    
@@ -88,6 +114,16 @@ namespace Model
                 throw new Exception("Matrícula tem que ser maior que 0"); 
             }
             Matricula = matricula;
+        }
+
+        public void AdicionarNota(double nota)
+        {
+            throw new NotImplementedException();
+        }
+
+       public List<double> GetNotas()
+        {
+            return Notas;
         }
     }
 }
